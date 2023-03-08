@@ -41,6 +41,72 @@
 - Vim se ejecuta en segundo plano, puedes presionar la combinación de teclas ``Ctrl-z``. También puedes ejecutar los comandos ``:stop`` o ``:suspend``. Para volver a retomar la sesión suspendida de Vim, ejecuta ``fg`` desde la terminal.
 
 ## CAPITULO2: BUFFERS, VENTANAS Y PESTANAS
+### BUFFERS
+#### QUE SON LOS BUFFERS
+- Espacio en la memoria en el que puedes escribir y editar algún texto
+- Al abrir vim abres un buffer
+EJEMPLO 
+    - Cuando presiono ``vim index1.html index2.html`` se me **abren** 2 buffers
+- Puedes **mostrar** todos los buffers mediante el comando ``:buffers`` (también puedes usar ``:ls`` o ``:files``).
+
+#### FORMAS DE DESPLAZARSE EN LOS BUFFERS
+IR AL SIGUIENTE O PREVIO BUFFER
+    - ``:bnext`` o de manera **abreviada** puedes utilizar ``:bn`` para ir al **buffer siguiente** (``:bprevious`` o ``:bp`` para ir al **buffer previo**).
+IR A UN BUFFER BUSCANDO POR SU NOMBRE
+    - ``:buffer + nombre_de_archivo``. De manera **abreviada** puedes utilizar ``:b``. Vim puede autocompletar el nombre de archivo con Tab.
+BUSCAR UN BUFFER POR SU NUMERO
+    - ``:buffer + n``, donde n es el número del buffer. También puedes reemplazar ``:buffer`` por ``:b``. Por ejemplo, escribiendo: ``:buffer 2`` o ``:b 2`` te llevará al buffer número 2.
+SALTAR DIFFERNTES BUFFERS
+    - Salta a la antigua posición en la lista de saltos con ``Ctrl-O`` y a la nueva posición con ``Ctrl-I``. (Estos no son métodos específicos para buffers, pero pueden ser utilizados para saltar entre diferentes buffers. Explicaré más detalles sobre los saltos en el capítulo 5.)
+IR A UN BUFFER PREVIAMENTE EDITADO
+    - Ir al buffer previamente editado con ``Ctrl-^``.
+
+#### ELIMINAR BUFFERS
+- Para eliminar el buffer en el que estas actualmente presiona ``:bdelete`` 
+    - Este comando puede seguir luego del numero del buffer. Ej ``bdelete 3`` o el nombre 
+    del arhivo Ej `:bdelete buffer_name``
+
+### LEAVE OUT VIM
+- Cerrar todos los buffers a la vez ``:qall``
+- Cerrar todos los buffers sin guardar cambios ``:qall!``
+- Guardar y salir ``:wqall``
+
+### WINDOWS
+#### QUE ES UNA VENTANA
+- Una ventana es una división gráfica en un buffer
+
+#### ATAJOS
+``split nombre_del_archivo`` abre una ventana **horizontalmente**
+``vsplit nombre_del_archivo`` abre una ventana **verticalmente**
+``Ctrl-W H ``   Mueve el cursor a la ventana de la **izquierda**
+``Ctrl-W J ``  Mueve el cursor a la ventana **inferior**
+``Ctrl-W K``Mueve el cursor a la ventana **superior**
+``Ctrl-W L``    Mueve el cursor a la ventana de la **derecha**
+``:buffer nombre_del_archivo`` Para **cambiar** de buffer en una misma ventana
+``:new nombre_de_archivo ``      Crea una **nueva ventana**
+``:quit`` **Cerrar una ventana**
+``:h window`` Para **mas informacion**
+- En el modo normal 
+``Ctrl-W V ``   Abre una nueva **división vertical**
+``Ctrl-W S``    Abre una nueva **división horizontal**
+``Ctrl-W C``    **Cierra** una ventana
+``Ctrl-W O ``   Hace que la **ventana actual** sea la **única** en la pantalla y cierra las demás ventanas
+
+### TABS 
+- Una pestaña en una **colección de ventana**
+- Cuando cierras una pestaña en Vim, **no estás cerrando un archivo**. Recuerda, Vim almacena los archivos en la memoria mediante los buffers. Cerrar una pestaña (o una ventana) no hace que ese archivo desaparezca, todavía permanecen abierto en de los buffers.
+#### COMANDOS
+``:tabnew archivo.txt``    Abre archivo.txt en una **nueva pestaña**
+``:tabclose``              Cierra la **pestaña actual**
+``:tabnext``            Ir a la **próxima pestaña**
+``:tabprevious``        Ir a la **pestaña previa**
+``:tablast``            Ir a la **última pestaña**
+``:tabfirst``           Ir a la **primera pestaña**
+``gt``  **Moverse** entre pestanas (puede ir acompanado con el numero de buffer)
+``vim -p archivo1.js archivo2.js archivo3.js`` **Arrancar** vim con multiples pestanas
+
+**OJO** Tmux no es igual a pestanas
+
 ## CAPITULO3: BUSCAR ARCHIVOS 
 ## CAPITULO4: LA GRAMATICA DE VIM 
 ## CAPITULO5: MOVIENDOTE POR UN ARCHIVO 
