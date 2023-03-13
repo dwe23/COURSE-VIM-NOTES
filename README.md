@@ -1,4 +1,5 @@
 # COURSE-VIM-NOTES
+---
 ## BUSQUEDA
 - Aquí tienes un **truco extra** al utilizar el manual de la ayuda de Vim: supón que quieres aprender más sobre lo que hace `Ctrl-P` en el modo insertar. Si solo buscas `:h CTRL-P`, te enviará a lo que hace `Ctrl-P` en el modo normal. Esa no es la ayuda sobre `Ctrl-P` que estabas buscando. En este caso, deberás buscar esto `:h i_CTRL-P`. El prefijo `i_` representa al modo insertar. Pon atención sobre a qué modo pertenece lo que andas buscando.
 
@@ -8,6 +9,7 @@
     - De manera alternativa, si no quieres realizar cambios en los ajustes que se guarden de forma permanente, siempre puedes ejecutar el comando set en la línea de comandos, ejecutando ``:set number``. La contrapartida de este método es que estos ajustes son temporales. Cuando cierres Vim los cambios y opciones desaparecen
 
 ## CAPITULO 1: EJECUTANDO VIM
+***
 
 ### GUARDANDO UN FICHERO
 - También puedes escribir ``:w`` de forma abreviada. Si este es un archivo nuevo, necesitarás darle un nombre antes de **guardarlo**. Vamos a llamarlo archivo.txt. Ejecuta: ``:w archivo.txt``
@@ -41,6 +43,7 @@
 - Vim se ejecuta en segundo plano, puedes presionar la combinación de teclas ``Ctrl-z``. También puedes ejecutar los comandos ``:stop`` o ``:suspend``. Para volver a retomar la sesión suspendida de Vim, ejecuta ``fg`` desde la terminal.
 
 ## CAPITULO2: BUFFERS, VENTANAS Y PESTANAS
+---
 ### BUFFERS
 #### QUE SON LOS BUFFERS
 - Espacio en la memoria en el que puedes escribir y editar algún texto
@@ -106,9 +109,53 @@ IR A UN BUFFER PREVIAMENTE EDITADO
 ``vim -p archivo1.js archivo2.js archivo3.js`` **Arrancar** vim con multiples pestanas
 
 **OJO** Tmux no es igual a pestanas
+## CAPITULO3: SEARCH FILES 
+***
+``:edit archivo.txt`` To **open** a file 
+>We can use ``*`` as a wildcard
+EXAMPLE 
+``:edit *.yml<Tab>`` vim will show all the files that contain ``.yml`` extension
 
-## CAPITULO3: BUSCAR ARCHIVOS 
-## CAPITULO4: LA GRAMATICA DE VIM 
+>To search even inside your files to your project you can use ``**``. You can move through the files that have the similiar filters  with ``<tab>``
+EXAMPLE 
+``:edit **/*.md<Tab>`` In this example we are going inside of one of our files and we are searching all the markdown files that are inside this file
+
+>We can use vim file explorer named ``netrw`` to the following ways
+``:edit .`` To open netrw in a current file
+``:edit name_file`` To open netrw in a scpecific file
+
+### Find and Path 
+To difference to ``:edit`` ``:find`` allow to you to specify in what files do you want to do a research. For example if you want research ``sport.txt`` in only ``/carpet1`` and   ``/carpet2``, you can do it using ``find``
+To save the directories that you want to do the research, we use the command ``path``
+``:set path?``To see the directories saved 
+``,`` Is a caracter that separated each directory saved
+``.``Is to related to the currency file
+``:set path+=$PWD/**`` To attach all the file that you have in the currency directory to the path
+``:set path-=`` To remove the current directory use
+``:set path+=``To add the current directory use
+``:set path=.`` To search relative to the directory of the current file
+``:set path=,,``To search in the current directory use an empty string between two commas. 
+> You can see the difference between to two last clicking on the following link 
+[link to see the difference](https://thunder-giraffe-8fd.notion.site/set-path-don-t-store-your-paths-when-you-leave-vim-e59002ef35144a23813c192db4eb184f)
+### GREP
+- Search **phrases** in a differents files 
+#### EXTERNAL GREP
+- It has the following **sintaxis**  ``:vim /patrón/ archivo``
+EXAMPLE 
+    - If we want to search all the **file that contains the character** ``hola``, you can do
+    that writing the following  ``:vim hola name_to_file``
+    - We can include **wildcards** Ej ``:vim hola VIM_COURSE/*``,``:vim hola VIM_COURSE/**.txt``,etc
+-  To see all the results we can use quickfix. There are some commands to use this: 
+``:copen ``       **Abrir** la ventana quickfix
+``:cclose``      **Cerrar** la ventana quickfix
+``:cnext``        Ir al **siguiente** error
+``:cprevious ``   Ir al error **anterior**
+``:colder  ``     Ir a la lista de errores **mas antigua**
+``:cnewer``       Ir a la lista de errores **mas nueva**
+#### INTERNAL GREP
+- You can see the structure clicking the following link: 
+[link to see the estructure](https://thunder-giraffe-8fd.notion.site/GREP-dc7059cf7604412281e57d8d831c4aa1)
+## CAPITULO7: LA GRAMATICA DE VIM 
 ## CAPITULO5: MOVIENDOTE POR UN ARCHIVO 
 ## CAPITULO6: EL MODO INSERTAR 
 ## CAPITULO7: EL COMANDO DEL PUNTO 
