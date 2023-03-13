@@ -155,6 +155,21 @@ EXAMPLE
 #### INTERNAL GREP
 - You can see the structure clicking the following link: 
 [link to see the estructure](https://thunder-giraffe-8fd.notion.site/GREP-dc7059cf7604412281e57d8d831c4aa1)
+#### NETRW
+- At the same you open vim, you can start netrw
+```
+vim .   To the file when you are
+vim src/client/  To your selected file
+:Explore     Inicia netrw en el archivo actual
+:Sexplore    No es broma. Inicia netrw en una pantalla dividida en la mitad superior
+:Vexplore    Inicia netrw en una pantalla dividida en la mitad izquierda
+%    Crear un nuevo archivo
+d    Crear un nuevo directorio
+R    Renombra un archivo o directorio
+D    Elimina un archivo o directorio
+```
+- On this, you can use **vim movements**
+- If you other **alternative**, you can use nerdtree
 ## CAPITULO7: LA GRAMATICA DE VIM 
 ## CAPITULO5: MOVIENDOTE POR UN ARCHIVO 
 ## CAPITULO6: EL MODO INSERTAR 
