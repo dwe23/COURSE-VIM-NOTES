@@ -170,16 +170,72 @@ D    Elimina un archivo o directorio
 ```
 - On this, you can use **vim movements**
 - If you other **alternative**, you can use nerdtree
-## CAPITULO7: LA GRAMATICA DE VIM
+## CAPITULO4: LA GRAMATICA DE VIM'
+### SUSTANTIVOS(MOVIMIENTOS)
+```
+h    Izquierda
+j    Abajo
+k    Arriba
+l    Derecha
+w    Mover el cursor hacia adelante al principio de la palabra siguiente
+}    Saltar al siguiente párrafo
+$    Ir al final de la línea
+```
+### VERBOS(OPERADORES)
+```
+y    **Copiar** un texto (*yank* en Vim sería la acción de copiar, de ahí la letra `y`)
+d    **Eliminar** un texto y guardarlo en el registro (*delete* en Vim sería la acción de eliminar, de ahí la letra `d`)
+c    **Eliminar** un texto, guardarlo en el registro y comenzar en el modo de insertar
+```
+### OBJETOS DE TEXTO (mas sustantivos)
+- Selecciona un objeto entre parentesis y lo elimina. Lo puede hacer de las siguietnes formas 
+```
+i + objeto    Dentro del objeto de texto
+a + objeto    Fuera del objeto de texto
+```
+EJEMPLO 
+```
+const hello = function() {
+  console.log("Hello Vim");
+  return true;
+}
+```
+- Para eliminar por completo el texto **"Hello Vim"**: di(.
+- Para eliminar el contenido de la **función (rodeado por {})**: di{.
+- Para eliminar la palabra **"Hello"**: diw.
+
+LISTA DE OBJETOS 
+```
+w         Una palabra
+p         Un párrafo
+s         Una frase (*sentence* en inglés)
+( o )     Un par de ( )
+{ o }     Un par de { }
+[ o ]     Un par de [ ]
+< o >     Un par de < >
+t         Etiquetas XML (*tags* en inglés)
+"         Un par de " "
+'         Un par de ' '
+`         Un par de ` `
+```
+## CAPITULO5: MOVIENDOTE POR UN ARCHIVO 
+- Para inhabilitar las direccionales del teclado escribir el siguiente codigo:
+```
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+```
+
+## CAPITULO6: EL MODO INSERTAR 
+## CAPITULO7: EL COMANDO DEL PUNTO 
 - Como repetir una accion
 Repetiremos la accion de cambiar una palabra por otra 
 1. Buscar una palabra con ``\`` 
 2. Escribir ``cw(palabra a reemplazar)``
 3. ``n`` Para encontrar la siguiente coincidencia 
 
-## CAPITULO5: MOVIENDOTE POR UN ARCHIVO 
-## CAPITULO6: EL MODO INSERTAR 
-## CAPITULO7: EL COMANDO DEL PUNTO 
+
 ## CAPITULO8: REGISTROS
 ## CAPITULO9: MACROS 
 ## CAPITULO10: DESHACER 
