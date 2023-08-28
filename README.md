@@ -54,15 +54,20 @@ EJEMPLO
 
 #### FORMAS DE DESPLAZARSE EN LOS BUFFERS
 IR AL SIGUIENTE O PREVIO BUFFER
-    - ``:bnext`` o de manera **abreviada** puedes utilizar ``:bn`` para ir al **buffer siguiente** (``:bprevious`` o ``:bp`` para ir al **buffer previo**).
+
+- ``:bnext`` o de manera **abreviada** puedes utilizar ``:bn`` para ir al **buffer siguiente** (``:bprevious`` o ``:bp`` para ir al **buffer previo**).
 IR A UN BUFFER BUSCANDO POR SU NOMBRE
-    - ``:buffer + nombre_de_archivo``. De manera **abreviada** puedes utilizar ``:b``. Vim puede autocompletar el nombre de archivo con Tab.
+    
+- ``:buffer + nombre_de_archivo``. De manera **abreviada** puedes utilizar ``:b``. Vim puede autocompletar el nombre de archivo con Tab.
 BUSCAR UN BUFFER POR SU NUMERO
-    - ``:buffer + n``, donde n es el número del buffer. También puedes reemplazar ``:buffer`` por ``:b``. Por ejemplo, escribiendo: ``:buffer 2`` o ``:b 2`` te llevará al buffer número 2.
+    
+- ``:buffer + n``, donde n es el número del buffer. También puedes reemplazar ``:buffer`` por ``:b``. Por ejemplo, escribiendo: ``:buffer 2`` o ``:b 2`` te llevará al buffer número 2.
 SALTAR DIFFERNTES BUFFERS
-    - Salta a la antigua posición en la lista de saltos con ``Ctrl-O`` y a la nueva posición con ``Ctrl-I``. (Estos no son métodos específicos para buffers, pero pueden ser utilizados para saltar entre diferentes buffers. Explicaré más detalles sobre los saltos en el capítulo 5.)
+
+- Salta a la antigua posición en la lista de saltos con ``Ctrl-O`` y a la nueva posición con ``Ctrl-I``. (Estos no son métodos específicos para buffers, pero pueden ser utilizados para saltar entre diferentes buffers. Explicaré más detalles sobre los saltos en el capítulo 5.)
 IR A UN BUFFER PREVIAMENTE EDITADO
-    - Ir al buffer previamente editado con ``Ctrl-^``.
+    
+- Ir al buffer previamente editado con ``Ctrl-^``.
 
 #### ELIMINAR BUFFERS
 - Para eliminar el buffer en el que estas actualmente presiona ``:bdelete`` 
