@@ -135,14 +135,23 @@ EXAMPLE
 
 ### Find and Path 
 To difference to ``:edit`` ``:find`` allow to you to specify in what files do you want to do a research. For example if you want research ``sport.txt`` in only ``/carpet1`` and   ``/carpet2``, you can do it using ``find``
+
 To save the directories that you want to do the research, we use the command ``path``
+
 ``:set path?``To see the directories saved 
+
 ``,`` Is a caracter that separated each directory saved
+
 ``.``Is to related to the currency file
+
 ``:set path+=$PWD/**`` To attach all the file that you have in the currency directory to the path
+
 ``:set path-=`` To remove the current directory use
+
 ``:set path+=``To add the current directory use
+
 ``:set path=.`` To search relative to the directory of the current file
+
 ``:set path=,,``To search in the current directory use an empty string between two commas. 
 > You can see the difference between to two last clicking on the following link 
 [link to see the difference](https://thunder-giraffe-8fd.notion.site/set-path-don-t-store-your-paths-when-you-leave-vim-e59002ef35144a23813c192db4eb184f)
