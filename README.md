@@ -170,7 +170,13 @@ D    Elimina un archivo o directorio
 ```
 - On this, you can use **vim movements**
 - If you other **alternative**, you can use nerdtree
-## CAPITULO7: LA GRAMATICA DE VIM 
+## CAPITULO7: LA GRAMATICA DE VIM
+- Como repetir una accion
+Repetiremos la accion de cambiar una palabra por otra 
+1. Buscar una palabra con ``\`` 
+2. Escribir ``cw(palabra a reemplazar)``
+3. ``n`` Para encontrar la siguiente coincidencia 
+
 ## CAPITULO5: MOVIENDOTE POR UN ARCHIVO 
 ## CAPITULO6: EL MODO INSERTAR 
 ## CAPITULO7: EL COMANDO DEL PUNTO 
