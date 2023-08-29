@@ -492,10 +492,24 @@ Los cambios o borrados menores a una línea no se almacenan en los registros num
 - Para **agregar mas** texto dentro de un registro escribimos el registro en mayuscula ``"Ayiw`` 
 
 
-
-
-### Registros de solo lectura 
+### Registros de solo lectura
+```
+.    Almacena el último texto insertado
+:    Almacena lo último que fue ejecutado en la línea de comandos
+%    Almacena el nombre del archivo actual 
+```
 ### Registros de expresiones 
+>Ej
+- Calcular expresion matematica 
+```
+"=1+1<Enter>p
+```
+- Obtener valor de cualquier expresion 
+>Ej 
+- Obtener el valor del registro a 
+```
+"=@a 
+```
 ### Registros de seleccion 
 ### Registros de agujero negro 
 ### Registro del ultimo patron de busqueda 
