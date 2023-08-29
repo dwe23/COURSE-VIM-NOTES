@@ -505,20 +505,31 @@ Los cambios o borrados menores a una línea no se almacenan en los registros num
 "=1+1<Enter>p
 ```
 - Obtener valor de cualquier expresion 
->Ej 
-- Obtener el valor del registro a 
+>Ej              
+Obtener el valor del registro a 
 ```
 "=@a 
 ```
-### Registros de seleccion 
+Obtener valores desde el registro a mientras estas en el modo insertar
+```
+Ctrl-R =@a
+```
+### Registros de seleccion
+Vim tiene dos registros de selección: ``quotestar ("*)`` y ``quoteplus ("+)``. Puedes utilizarlos para acceder a texto copiado desde programas externos.
+
 ### Registros de agujero negro 
-### Registro del ultimo patron de busqueda 
-### Acciones con los registros 
+- Hacer que vim no almacene un texto eliminado ``"_``. Para eliminar una línea y hacer que Vim no almacene esa línea eliminada en ningún registro, utiliza "_dd.
+### Registro del ultimo patron de busqueda
+Para pegar tu última búsqueda (con ``/`` o ``?``), puedes utilizar el registro del último patrón de búsqueda (``"/``). Para pegar el término de la última búsqueda utiliza ``"/p``. 
+### Acciones con los registros
 VER REGISTROS 
-EJECUTANDO UN REGISTRO 
-LIMPIAR EL CONTENIDO DE UN REGISTRO 
+- Para ver el contenido de tus registros, utiliza el comando :register. Para ver solo los registros ``"a``, ``"1`` y ``"-``, utiliza ``:register a 1 -``
+EJECUTANDO UN REGISTRO
+- También pueden ejecutar macros mediante ``@`` 
+LIMPIAR EL CONTENIDO DE UN REGISTRO
+- ``qaq`` pegara un macro vacio
 PEGAR EL CONTENIDO DE UN REGISTRO 
- 
+- Para pegar el contenido de cualquier registro. Por ejemplo, si ejecutas :put a, Vim mostrará el contenido a bajo la línea actual.
 ## CAPITULO9: MACROS 
 ## CAPITULO10: DESHACER 
 ## CAPITULO11: MODO VISUAL
