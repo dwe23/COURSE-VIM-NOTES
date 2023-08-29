@@ -255,7 +255,18 @@ B     Mueve el cursor hacia atrás al principio de la PALABRA previa
 ge    Mueve el cursor hacia atrás al final de la palabra previa
 gE    Mueve el cursor hacia atrás al final de la PALABRA previa
 ```
+
 Entonces, ¿cuáles son las similitudes y diferencias entre una palabra y una PALABRA? Tanto una palabra como una PALABRA están separadas por espacios en blanco. Una palabra es una secuencia de caracteres que contienen únicamente este grupo de caracteres `a-zA-Z0-9_`. Una PALABRA es una secuencia que incluyen todos los caracteres excepto el espacio en blanco (cuando me refiero a espacio en blanco, esto incluye tanto un espacio, una separación por tabulador o un fin de línea)
+
+```
+f    Busca hacia adelante una coincidencia en la línea actual
+F    Busca hacia atrás una coincidencia en la línea acual
+t    Busca hacia adelante una coincidencia en la línea actual, posicionando el cursor antes de la coincidencia
+T    Busca hacia atrás una coincidencia en la línea actual, posicionando el cursor antes de la coincidencia
+;    Repite la última búsqueda en la línea actual en la misma dirección
+,    Repite la última búsqueda en la línea actual en dirección contraria
+```
+
 
 - Para inhabilitar las direccionales del teclado escribir el siguiente codigo:
 ```
@@ -264,6 +275,121 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 ```
+
+### NAVEGACION EN UNA FRASE O PARRAFO
+
+NAVEGACION EN UNA FRASE
+```
+(    Salta a la frase previa
+)    Salta a la siguiente frase
+```
+NAVEGACION EN UN PARRAFO
+Un párrafo comienza después de cada línea vacía y también en cada conjunto de una macro de párrafo especificada por los pares de caracteres en la opción de párrafos.
+
+```
+{    Salta al párrafo previo
+}    Salta al párrafo siguiente
+```
+
+### NAVEGACION DE PAREJAS 
+```%    Navega de una a otra pareja, normalmente funciona con (), [], {}```
+
+### NAVEGACION POR NUMERO DE LINEA
+```
+gg    Va a la primera línea (o 1G)
+G     Va a la última línea
+nG    Va a la línea n
+n%    Va al n% del archivo
+```
+- Ver el numero de lineas de un archivo se utiliza `CTRL-g`
+
+### NAVEGACION POR LA VENTANA 
+```
+H     Ir a la parte superior de la ventana
+M     Ir a la parte media de la ventana
+L     Ir a la parte inferior de la ventana
+nH    Va a la línea n desde la parte superior de la ventana
+nL    Va a la línea n desde la parte inferior de la ventana
+```
+### DESPLAZANDOSE
+```
+Ctrl-E    Desplaza el texto hacia arriba una línea
+Ctrl-D    Desplaza media pantalla hacia arriba
+Ctrl-F    Desplaza una pantalla completa hacia arriba el texto
+Ctrl-Y    Desplaza el texto hacia abajo una línea
+Ctrl-U    Desplaza media pantalla hacia abajo
+Ctrl-B    Desplaza una pantalla completa hacia abajo el texto
+```
+
+```
+zt    LLeva la línea actual donde está el cursor cerca de la parte superior de la pantalla
+zz    LLeva la línea actual donde está el cursor a la parte media de la pantalla
+zb    LLeva la línea actual donde está el cursor cerca de la parte inferior de la pantalla
+```
+### NAVEGACION POR BUSQUEDA 
+```
+/    Busca hacia adelante una coincidencia
+?    Busca hacia atrás una coincidencia
+n    Repite la última búsqueda (en la misma dirección que la búsqueda previa)
+N    Repite la última búsqueda (en la dirección opuesta que la búsqueda previa)
+```
+
+```
+*     Busca la palabra completa bajo el cursor hacia adelante
+#     Busca la palabra completa bajo el cursor hacia atrás
+g*    Busca la palabra bajo el cursor hacia adelante
+g#    Busca la palabra bajo el cursor hacia atrás
+```
+### MARCAR POSICION
+
+Puedes utilizar marcas para guardar la posición actual del cursor y poder volver a esa posición más tarde. 
+
+Es como un marcador para la edición de texto. Puedes establecer un marcador con ``mx``, donde ``x`` puede ser cualquier letra del alfabeto```a-z A-Z``. 
+
+- Existen dos maneras de volver a la marca establecida: de manera exacta (línea y columna) mediante ```x`` y a la línea con ``'x``.
+
+
+
+```
+ma    Marca una posición, estableciendo la marca "a" en la posición actual del cursor
+`a    Salta a la línea y columna donde se encuentra "a"
+'a    Salta a la línea donde se encuentra "a"
+```
+
+```
+''    Salta hacia atrás a la última línea donde se encontraba el cursor en el *buffer* actual antes de saltar
+``    Salta hacia atrás a la última posición en el *buffer* actual a la última posición en el *buffer* actual antes de saltar
+`[    Salta al comienzo del texto previamente cambiado / pegado
+`]    Salta al final del texto previamente cambiado / pegado
+`<    Salta al comienzo de la última selección visual
+`>    Salta al final de la última selección visual
+`0    Salta hacia atrás al último archivo editado cuando salió de Vim
+```
+
+### COMANDOS DE SALTO
+```
+'       Ir a la línea marcada
+`       Ir a la posición marcada
+G       Ir a la línea
+/       Buscar hacia adelante
+?       Buscar hacia atrás
+n       Repetir la úlrima búsqueda, en la misma dirección
+N       Repetir la última búsqueda, en la dirección opuesta
+%       Encontrar la pareja
+(       Ir a la frase anterior
+)       Ir a la frase siguiente
+{       Ir al párrafo anterior
+}       Ir al párrafo siguiente
+L       Ir a la última línea mostrada en la ventana
+M       Ir a la línea media mostrada en la ventana
+H       Ir a la línea superior mostrada en la ventana
+[[      Ir a la sección previa
+]]      Ir a la sección siguiente
+:s      Substituir
+:tag    Saltar a la etiqueta de definición
+```
+
+Existe una diferencia entre establecer marcas con letras minúsculas (a-z) y mayúsculas (A-Z). Las marcas con letras minúsculas, son marcas locales y las marcas con letras mayúsculas son marcas globales (a veces conocidas como marcas de archivo).
 
 ## CAPITULO6: EL MODO INSERTAR 
 ### ENTRAR EL MODO INSERTAR
