@@ -449,6 +449,28 @@ Repetiremos la accion de cambiar una palabra por otra
 
 
 ## CAPITULO8: REGISTROS
+- Los registros son 
+![](CAPITULO8.png) 
+### Operadores de registros 
+
+### Llamando registros desde el modo insertar 
+### Registros sin nombre 
+### Registros numerados 
+REGISTROS DE COPIA 
+REGISTROS NUMERADOS 
+### Registro de borrado 
+### Registros nominales 
+### Registros de solo lectura 
+### Registros de expresiones 
+### Registros de seleccion 
+### Registros de agujero negro 
+### Registro del ultimo patron de busqueda 
+### Acciones con los registros 
+VER REGISTROS 
+EJECUTANDO UN REGISTRO 
+LIMPIAR EL CONTENIDO DE UN REGISTRO 
+PEGAR EL CONTENIDO DE UN REGISTRO 
+ 
 ## CAPITULO9: MACROS 
 ## CAPITULO10: DESHACER 
 ## CAPITULO11: MODO VISUAL
