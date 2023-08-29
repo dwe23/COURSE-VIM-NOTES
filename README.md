@@ -454,14 +454,46 @@ Repetiremos la accion de cambiar una palabra por otra
 ![](CAPITULO8.png) 
 
 ### Operadores de registros 
-
+```
+y    Yank (copiar)
+c    Borrar texto e iniciar el modo insertar
+d    Borrar texto
+p    Pega el texto después del cursor
+P    Pega el texto antes del cursor
+```
 ### Llamando registros desde el modo insertar 
+`Ctrl-R a`
 ### Registros sin nombre 
+- Es ``""p``. Este almacena el último texto que copiaste, modificaste o borraste 
 ### Registros numerados 
 REGISTROS DE COPIA 
+- Es 0 
+- Si copias una línea entera de texto (yy), Vim realmente guarda ese texto en dos registros:
+	- El registro sin nombre (p).
+	- El registro de copia ("0p).
+
 REGISTROS NUMERADOS 
+- Cuando cambias o borras un texto de al menos una línea de largo, este texto se almacenará en un registro numerado del 1 al 9, ordenados 
+por el más reciente.
+- Para pegar registros consecutivamente por ejemplo: 
+```
+Escribe "1P para pegar el contenido del registro del número uno.
+Escribe . para pegar el contenido del registro numerado dos ("2).
+Escribe . para pegar el contenido del registro numerado tres ("3).
+```
+
+
 ### Registro de borrado 
+Los cambios o borrados menores a una línea no se almacenan en los registros numerados del 0-9, pero si en el pequeño registro de borrado ``("-)``
+
 ### Registros nominales 
+> Ej 
+	- Copiar una palabra dentro del registro a ``"ayiw``
+- Para **agregar mas** texto dentro de un registro escribimos el registro en mayuscula ``"Ayiw`` 
+
+
+
+
 ### Registros de solo lectura 
 ### Registros de expresiones 
 ### Registros de seleccion 
