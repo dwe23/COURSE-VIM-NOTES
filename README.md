@@ -450,7 +450,9 @@ Repetiremos la accion de cambiar una palabra por otra
 
 ## CAPITULO8: REGISTROS
 - Los registros son 
+
 ![](CAPITULO8.png) 
+
 ### Operadores de registros 
 
 ### Llamando registros desde el modo insertar 
