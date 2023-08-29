@@ -237,6 +237,26 @@ t         Etiquetas XML (*tags* en inglés)
 `         Un par de ` `
 ```
 ## CAPITULO5: MOVIENDOTE POR UN ARCHIVO 
+- Teclas de movimiento 
+```
+h   Izquierda
+j   Abajo
+k   Arriba
+l   Derecha
+
+```
+```
+w     Mueve el cursor hacia adelante al comienzo de la siguiente palabra
+W     Mueve el cursor hacia adelante al comienzo de la siguiente PALABRA
+e     Mueve el cursor hacia adelante una palabra hasta el final de la siguiente palabra
+E     Mueve el cursor hacia adelante una palabra hasta el final de la siguiente PALABRA
+b     Mueve el cursor hacia atrás al principio de la palabra previa
+B     Mueve el cursor hacia atrás al principio de la PALABRA previa
+ge    Mueve el cursor hacia atrás al final de la palabra previa
+gE    Mueve el cursor hacia atrás al final de la PALABRA previa
+```
+Entonces, ¿cuáles son las similitudes y diferencias entre una palabra y una PALABRA? Tanto una palabra como una PALABRA están separadas por espacios en blanco. Una palabra es una secuencia de caracteres que contienen únicamente este grupo de caracteres `a-zA-Z0-9_`. Una PALABRA es una secuencia que incluyen todos los caracteres excepto el espacio en blanco (cuando me refiero a espacio en blanco, esto incluye tanto un espacio, una separación por tabulador o un fin de línea)
+
 - Para inhabilitar las direccionales del teclado escribir el siguiente codigo:
 ```
 noremap <Up> <NOP>
@@ -246,12 +266,60 @@ noremap <Right> <NOP>
 ```
 
 ## CAPITULO6: EL MODO INSERTAR 
+### ENTRAR EL MODO INSERTAR
+- Formas de ingresar al modo insertar 
+```
+i    Inserta texto antes del cursor
+I    Inserta texto antes del primer carácter que no sea un espacio en blanco de la línea
+a    Añadir texto después del cursor
+A    Añadir texto al final de la línea
+o    Crea una nueva línea debajo del cursor y cambia al modo insertar
+O    Crea una nueva línea encima del cursor y cambia al modo insertar
+s    Elimina el carácter debajo del cursor e inserta texto (sustituye texto)
+S    Elimina la línea actual e inserta texto (sustituye toda la línea)
+gi   Inserta texto en la misma posición donde el modo insertar fue detenido por última vez en el *buffer* actual
+gI   Inserta texto al comienzo de una línea (columna 1)
+```
+### SALIR DEL MODO INSERTAR
+- Formas de salir del modo insertar 
+```
+<Esc>    Salir del modo insertar y volver al modo normal
+Ctrl-[   Salir del modo insertar y volver al modo normal
+Ctrl-C   Similar a Ctrl-[ y <Esc>, pero no controla las abreviaciones
+```
+### NUMERO Y EL MODO INSERTAR
+- Cuando antes del modo insertar pones un **numero** y haces una accion como escribir `hola mundo`, entonces la accion se repetira 
+segun el numero que hayas puesto. Por ejemplo `3i` 
+
+OJO 
+- Para pegar lo que tienes almacenado en un registro mientras estamos en el modo insertar escribimos `CTRL-R` mas el registro. Si por ejemplo 
+queremos pegar lo que tengamos en el registro  a escribimos `CTRL-R a`
+
+### HACER SCROLL 
+- Mientras estamos en el modo insertar
+```
+Ctrl-x Ctrl-Y    Desplaza el contenido de la pantalla hacia arriba
+Ctrl-x Ctrl-E    Desplaza el contenido de la pantalla hacia abajo
+```
+### AUTOCOMPLETADO
+```
+Ctrl-x Ctrl-L       Inserta una línea completa
+Ctrl-x Ctrl-N       Inserta un texto desde el archivo actual
+Ctrl-x Ctrl-I       Inserta un texto desde los archivos incluidos
+Ctrl-x Ctrl-F       Inserta un nombre de archivo
+```
+- Vim también tiene dos auto completados que no utiliza el submodo Ctrl-x:
+```
+Ctrl-N             Encuentra la siguiente palabra que coincide
+Ctrl-P             Encuentra la palabra anterior que coincide
+```
 ## CAPITULO7: EL COMANDO DEL PUNTO 
 - Como repetir una accion
 Repetiremos la accion de cambiar una palabra por otra 
 1. Buscar una palabra con ``\`` 
 2. Escribir ``cw(palabra a reemplazar)``
 3. ``n`` Para encontrar la siguiente coincidencia 
+
 
 
 ## CAPITULO8: REGISTROS
