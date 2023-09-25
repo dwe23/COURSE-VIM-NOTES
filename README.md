@@ -89,19 +89,32 @@ IR A UN BUFFER PREVIAMENTE EDITADO
 
 #### ATAJOS
 ``split nombre_del_archivo`` abre una ventana **horizontalmente**
+
 ``vsplit nombre_del_archivo`` abre una ventana **verticalmente**
+
 ``Ctrl-W H ``   Mueve el cursor a la ventana de la **izquierda**
+
 ``Ctrl-W J ``  Mueve el cursor a la ventana **inferior**
+
 ``Ctrl-W K``Mueve el cursor a la ventana **superior**
+
 ``Ctrl-W L``    Mueve el cursor a la ventana de la **derecha**
+
 ``:buffer nombre_del_archivo`` Para **cambiar** de buffer en una misma ventana
+
 ``:new nombre_de_archivo ``      Crea una **nueva ventana**
+
 ``:quit`` **Cerrar una ventana**
+
 ``:h window`` Para **mas informacion**
+
 - En el modo normal 
 ``Ctrl-W V ``   Abre una nueva **división vertical**
+
 ``Ctrl-W S``    Abre una nueva **división horizontal**
+
 ``Ctrl-W C``    **Cierra** una ventana
+
 ``Ctrl-W O ``   Hace que la **ventana actual** sea la **única** en la pantalla y cierra las demás ventanas
 
 ### TABS 
