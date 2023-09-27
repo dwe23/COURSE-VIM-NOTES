@@ -1,4 +1,4 @@
-# eeeeeeCOURSE-VIM-NOTES
+# COURSE-VIM-NOTES
 
 
 ---
@@ -546,7 +546,32 @@ LIMPIAR EL CONTENIDO DE UN REGISTRO
 PEGAR EL CONTENIDO DE UN REGISTRO 
 - Para pegar el contenido de cualquier registro. Por ejemplo, si ejecutas :put a, Vim mostrará el contenido a bajo la línea actual.
 ## CAPITULO9: MACROS 
-## CAPITULO10: DESHACER 
+- Los registros de macros vienen dese a-z
+
+``qa`` empezar a grabar marco
+
+``q`` detener macro
+
+``@a`` invocar macro
+
+``@@`` ejecutar el ultimo macro
+
+``normal @a`` ejecutar la macro en modo normal 
+
+``norm @a``    ejecutar la macro en modo normal en modo abreviado
+
+``2 normal @a`` ejecuta la macro en la linea 2 
+
+
+*COMANDOS EXTRAS*
+``gU`` cambiar la linea a mayuscula
+``~`` cambiar el caracter donde esta el curso a mayuscula 
+``$`` ir al final de una linea 
+``0`` ir al inicio de una linea
+
+- Aunque ejecutes de manera incorrecta una macro, vim intentara en lo posible corregir el error
+
+
 ## CAPITULO11: MODO VISUAL
 ## CAPITULO12: BUSCAR Y SUSTITUIR 
 ## CAPITULO13: EL COMANDO GLOBAL
