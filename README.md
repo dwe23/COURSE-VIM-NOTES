@@ -1,5 +1,4 @@
-# COURSE-VIM-NOTES
-************************
+# eeeeeeCOURSE-VIM-NOTES
 
 
 ---
