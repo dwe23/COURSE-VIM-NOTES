@@ -560,7 +560,25 @@ PEGAR EL CONTENIDO DE UN REGISTRO
 
 ``norm @a``    ejecutar la macro en modo normal en modo abreviado
 
-``2 normal @a`` ejecuta la macro en la linea 2 
+``2 normal @a`` ejecuta la macro en la linea 2
+
+``qaqqa macro @aq`` macro recursiva
+
+``qA macro q`` añadiendo acciones en una macro (las macros deben estar en mayusculas)
+
+``:put a`` ver la macro. Puedes editar y guardar la macro con ``"ay$`` o tambien ``
+Otra forma para pegar la edicion en la macro es ``:let @a="macro"``, y después ``Ctrl-R Ctrl-R ``a
+
+``:let @z = @a`` si copiar de un macro a otro
+
+``:1,$ normal @a`` ejecuta una macro en paralelo
+
+
+- OJO: 
+
+	ESC = ^[
+	CTRL+V ESC = escribir la tecla escape en el modo insertar 
+ 
 
 
 *COMANDOS EXTRAS*
@@ -584,6 +602,7 @@ PEGAR EL CONTENIDO DE UN REGISTRO
 ## CAPITULO20: VISTAS SESIONES Y VIMINFO
 ## CAPITULO21: OPERACIONES EN MULTIPLES ARCHIVOS 
 ## CAPITULO22: VIMRC
+
 ## CAPITULO23: EL GESTOR DE COMPLEMENTOS DE VIM(PACKAGES)
 ## CAPITULO24: LOS EJECUTABLES(RUNTIME) DE VIM
 ## CAPITULO25: TIPOS DE DATOS BASICOS DE VIMSCRIPT 
