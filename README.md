@@ -85,7 +85,7 @@ IR A UN BUFFER PREVIAMENTE EDITADO
 - Cerrar todos los buffers sin guardar cambios ``:qall!``
 - Guardar y salir ``:wqall``
 
-### WINDOWS
+### WINDOWS:
 #### QUE ES UNA VENTANA
 - Una ventana es una división gráfica en un buffer
 
