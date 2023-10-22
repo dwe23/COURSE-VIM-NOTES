@@ -203,6 +203,53 @@ D    Elimina un archivo o directorio
 ```
 - On this, you can use **vim movements**
 - If you other **alternative**, you can use nerdtree
+e
+#### FZF
+- Para instalar fzf primero debemos de instalar ripgrep
+```
+sudo apt update
+sudo apt install ripgrep
+```
+- Ahora instalamos fzf
+```
+sudo apt update
+sudo apt install fzf
+```
+- Debemos instalar el plugin en vim
+```
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+```
+- Para abrir fzf usamos 
+```
+:files
+```
+- Podemos agregar un atajo de comando con 
+```
+nnoremap <silent> <C-f> :Files<CR>
+```
+- Para buscar dentro de archivos 
+```
+:Rg
+```
+- Tenemos la siguiente sintaxis 
+``^`` Prefijo 
+``$`` Sufijo
+``'`` Palabra exacta 
+``|`` buscar 2 palabras a la vez o la que encuentre 
+``!`` buscar una palabra menos otra
+#### USAR RIPGREP EN VEZ GREP
+- Pegar en vimrc
+``set grepprg=rg\ --vimgrep\ --smart-case\ --follow``
+- Reemplazar textos en el proyecto
+``:grep "pizza"``
+
+``:cfdo %s/pizza/donut/g | update``
+- Reemplazar texto en el archivo seleccionado
+``:%bd | e#``
+``:Files``
+``:bufdo %s/pizza/donut/g | update``
+
 ## CAPITULO4: LA GRAMATICA DE VIM'
 ### SUSTANTIVOS(MOVIMIENTOS)
 ```
